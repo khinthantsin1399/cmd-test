@@ -8,10 +8,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.scm.ojt.veterinarypharmacy.entity.Medicine;
 import com.scm.ojt.veterinarypharmacy.persistance.dao.MedicineDao;
 
+@Transactional
 @Repository
 public class MedicineDaoImpl implements MedicineDao {
     @Autowired

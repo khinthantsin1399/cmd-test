@@ -13,13 +13,28 @@
 <body>
 	<div class="sec-content">
 		<div class="menu-btn">
-			<a href="${pageContext.request.contextPath}/medicine/list"
-				class="cmn-btn">Medicine List</a> <a
-				href="${pageContext.request.contextPath}/medicine/showForm"
-				class="cmn-btn">Medicine Add Form</a> 
-				<a
-				href="${pageContext.request.contextPath}/register"
-				class="cmn-btn">Register</a>
+			<!--  <a href="${pageContext.request.contextPath}/login"
+				class="cmn-btn">Login</a> <a
+				href="${pageContext.request.contextPath}/rigister"
+				class="cmn-btn">Register</a> -->
+				
+				
+				<c:if test="${pageContext.request.userPrincipal.name != null}">
+        Hello
+           <a href="#">
+                ${pageContext.request.userPrincipal.name} </a>
+         &nbsp;|&nbsp;
+           <a href="${pageContext.request.contextPath}/logout">Logout</a>
+ 
+        </c:if>
+        <c:if test="${pageContext.request.userPrincipal.name == null}">
+            <a href="${pageContext.request.contextPath}/login">Login</a>
+            |
+            <a href="${pageContext.request.contextPath}/register">Register</a>
+        </c:if>
+			
+				
+		
 		</div>
 	</div>
 </body>
