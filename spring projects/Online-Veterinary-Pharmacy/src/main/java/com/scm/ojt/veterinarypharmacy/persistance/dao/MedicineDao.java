@@ -50,5 +50,4 @@ public interface MedicineDao {
      * @return void
      */
     public void deleteMedicine(int theId);
-
 }

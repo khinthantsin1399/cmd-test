@@ -19,20 +19,28 @@
 				<h2 class="cmn-ttl">Medicine Add Form</h2>
 				<form:form action="saveMedicine" method="post"
 					modelAttribute="medicine" cssClass="form">
+					<form:errors path="*" cssClass="errorblock" element="div"></form:errors>
+					
 
 					<form:hidden path="id" />
 					<label for="name" class="form-cmn-txt"> Name</label>
 					<form:input path="name" cssClass="input" />
-
-
+					<form:errors path="name" cssClass="error"></form:errors>
+				
 					<label for="category" class="form-cmn-txt">Category</label>
 					<form:input path="category" cssClass="input" />
+					<form:errors path="category" cssClass="error"></form:errors>
+					
 
 					<label for="description" class="form-cmn-txt">Description</label>
 					<form:input path="description" cssClass="input" />
+					<form:errors path="description" cssClass="error"></form:errors>
+					
 
 					<label for="price" class="form-cmn-txt">Price</label>
 					<form:input path="price" cssClass="input" />
+					<form:errors path="price" cssClass="error"></form:errors>
+					
 
 
 					<label for="status" class="form-cmn-txt">Status</label>
@@ -44,6 +52,8 @@
 
 					<label for="unit" class="form-cmn-txt">Unit In Stock</label>
 					<form:input path="unit" cssClass="input" />
+					<form:errors path="unit" cssClass="error"></form:errors>
+					
 
 
 					<form:button cssClass="btn">Add</form:button>
